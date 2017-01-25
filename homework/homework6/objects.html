@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TJZ BLOG | LEARN TO WALK BEFORE YOU RUN</title>
+	<link rel="stylesheet" href="objects_style.css">
+	<script language="javascript">
+
+   		// Objects
+   
+   		var tourOperator = "Ten Bellies Tours"; // a global variable
+   		var holidays = []
+
+   		// An object IS a function
+   		function Holiday(destination, duration, cost) {
+     		this.destination = destination; //"this" used in same sense as Java
+     		this.duration    = duration;
+     		this.cost        = cost;
+     		this.agent       = tourOperator;     
+   		}
+   
+   		function makeHoliday(dest, dur, cost) {
+     		hol = new Holiday(dest, dur, cost);
+     		holidays.push(hol);
+   		}
+   
+   		function outputObject(anObject) {
+     		for (f in anObject) {
+       			document.write("<b>"+ f + "</b>" + " = " + anObject[f] + "<br />");
+     		}
+     		document.write("<hr style=\"height:2px; border:none; border-top: 1px solid #ddd; width: 20%; text-align: left; margin-left:0\">");
+   		}
+
+   		function displayHolidays(holidays){
+   			document.write("<hr style=\"height:2px; border:none; border-top: 1px solid #ddd; width: 50%; text-align: left; margin-left:0\">");
+   			for(var i = 0; i < holidays.length; i++){
+   				outputObject(holidays[i]);
+   			}
+   		}
+
+   </script>
+</head>
+
+<body>	
+	<section class="main">
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<a href="../../index.html">
+						<img src="../../img/logo.png" width="400" height="150" alt="TJZ BLOG | LEARN TO WALK BEFORE YOU RUN">
+					</a>
+				</div>
+				<!-- logo -->
+				<div class="social">
+					<ul>
+						<li>
+							<a href="#" class="social-facebook" title="facebook">
+								<img src="../../img/facebook.png" alt="facebook" class="social-facebook-img">
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-twitter" title="twitter">twitter</a>
+						</li>
+						<li>
+							<a href="#" class="social-googleplus" title="google plus">google plus</a>
+						</li>
+					</ul>
+				</div>
+				<!-- social -->
+				<div class="separator"></div>
+			</div>
+			<!-- wrap -->
+		</header>
+		
+		<section class="content">
+			<div class="wrap">
+				<script language="javascript">
+  					document.write("<h2>Objects</h2>");
+  					document.write("<b>Hi there</b><br />");
+  					makeHoliday("Toronto", "2 Weeks", "$400");
+  					makeHoliday("Beijing", "3 Weeks", "$600");
+  					makeHoliday("Shanghai", "4 Weeks", "$800");
+  					makeHoliday("Changsha", "4 Weeks", "$600");
+  					displayHolidays(holidays);
+				</script>
+				<!-- javascript -->
+			</div>
+		</section>
+		<!-- content -->
+
+	</section>
+	<!-- main -->
+
+	<footer>
+		<div class="wrap">
+				
+		</div>
+		<!-- wrap -->
+		<div class="footer-image"></div>
+		
+	</footer>
+
+	
+	
+</body>
+</html>

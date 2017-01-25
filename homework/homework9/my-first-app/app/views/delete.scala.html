@@ -1,0 +1,20 @@
+@(lines: List[String])
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Delete Result</title>
+	
+</head>
+
+<body>
+    All items you selected have been deleted.
+    The ramains are listed below
+    <ul>
+    @for(line <- lines){
+        <li>@line</li>
+    }
+    </ul>
+</body>
+</html>

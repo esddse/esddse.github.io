@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cook.xsl" ?>
+<cook>
+  <recipe>
+    <name>Rhubarb and Custard</name>
+    <ingredient>
+      <name>Milk</name>
+      <amount>15</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>700</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Custard Powder</name>
+      <amount>8</amount>
+      <unit>tbs</unit>
+    </ingredient>
+    <preparation>Mix together and put in oven proof dish</preparation>
+    <cooking>Heat in a moderate oven for 40 mins</cooking>
+  </recipe>
+  <recipe>
+    <name>Roast Computer</name>
+    <ingredient>
+      <name>CPU</name>
+      <amount>4.0</amount>
+      <unit>GHz</unit>
+    </ingredient>
+    <ingredient>
+      <name>Main Memory</name>
+      <amount>8</amount>
+      <unit>GB</unit>
+    </ingredient>
+    <ingredient>
+      <name>Hard Disk</name>
+      <amount>1024</amount>
+      <unit>GB</unit>
+    </ingredient>
+    <ingredient>
+      <name>Screen</name>
+      <amount>1</amount>
+      <unit>个</unit>
+    </ingredient>
+    <ingredient>
+      <name>Keyboard</name>
+      <amount>1</amount>
+      <unit>个</unit>
+    </ingredient>
+    <ingredient>
+      <name>Mouse</name>
+      <amount>1</amount>
+      <unit>个</unit>
+    </ingredient>
+    <ingredient>
+      <name>Hammer</name>
+      <amount>1</amount>
+      <unit>个</unit>
+    </ingredient>
+    <preparation>Mix together and Smash them by the hammer</preparation>
+    <cooking>Roast all(include the hammer) on the grill for 40 mins</cooking>
+  </recipe>
+</cook>
+

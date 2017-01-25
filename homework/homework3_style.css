@@ -1,0 +1,160 @@
+
+/*-----common------*/
+html{
+	height: 100%;
+	background: #ffffff;
+}
+body{
+	margin: 0;
+	height: 100%;
+	font: 17px/25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #777c7f;
+
+}
+strong{
+	font-size: 17px;
+	color: #00aa88;
+}
+.main{
+	min-height: 100%;
+	overflow: hidden;
+}
+.wrap{
+	margin: 0 auto;
+	max-width: 940px;
+	padding: 0 35px;
+}
+.description,
+.question{
+	padding: 0 10px;
+}
+.answer{
+	background-color: rgba(255, 242, 0, 0.2);
+	padding: 0 10px;
+	border: solid 2px #ddd;
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+.answer p{
+	color: #008866;
+}
+.answer img{
+	max-width: 100%;
+	height: auto;
+}
+h1{
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	margin: 0 0 55px;
+}
+h2{
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 14px;
+}
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+h4{
+	font-size: 10px;
+	font-weight: 200;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*-----header------*/
+header{
+	padding: 50px 0 51px;
+}
+.logo{
+	float: left;
+	margin: 0 0 20px;
+}
+.logo a{
+	display: block;
+	text-align: center;
+}
+.social{
+	float: right;
+	padding: 19px 0 50px;
+}
+.social li{
+	float: left;
+	margin: 22px 0 0 22px;
+}
+
+.social li a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    background-color: #ccd0d2;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.social-facebook-img{
+	width: 32px;
+	height: 32px;
+	
+}
+
+.social li a.social-facebook:hover {
+    background-color: #3b5998;
+}
+.social li a.social-facebook:active {
+    background-color: #355089;
+}
+
+.social li a.social-twitter:hover {
+    background-color: #55acee;
+}
+.social li a.social-twitter:active {
+    background-color: #4c9ad6;
+}
+
+.social li a.social-googleplus:hover {
+    background-color: #dd4b39;
+}
+.social li a.social-googleplus:active {
+    background-color: #c64333;
+  }
+.separator{
+	height: 2px;
+	font-size: 0;
+	line-height: 0;
+	background: #e4e7e7;
+	clear: both;
+}
+
+/*-----footer-----*/
+.main{
+	padding-bottom: 390px;
+}
+footer{
+	margin: 0 0;
+	text-align: center;
+	position: relative;
+}
+
+.footer-image{
+	position: absolute;
+	margin: 0;
+	left: 0;
+	right: 0;
+	height: 250px;
+	bottom: 0;
+	background: url(../img/footer.jpg) no-repeat 50% 0;
+    background-size: cover;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TJZ BLOG | LEARN TO WALK BEFORE YOU RUN</title>
+	<link rel="stylesheet" href="homework4_style.css">
+</head>
+
+<body>	
+	<section class="main">
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<a href="../index.html">
+						<img src="../img/logo.png" width="400" height="150" alt="TJZ BLOG | LEARN TO WALK BEFORE YOU RUN">
+					</a>
+				</div>
+				<!-- logo -->
+				<div class="social">
+					<ul>
+						<li>
+							<a href="#" class="social-facebook" title="facebook">
+								<img src="../img/facebook.png" alt="facebook" class="social-facebook-img">
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-twitter" title="twitter">twitter</a>
+						</li>
+						<li>
+							<a href="#" class="social-googleplus" title="google plus">google plus</a>
+						</li>
+					</ul>
+				</div>
+				<!-- social -->
+				<div class="separator"></div>
+			</div>
+			<!-- wrap -->
+		</header>
+		
+		<section class="content">
+			<div class="wrap">
+				<div class="navigation">
+					<ul>
+						<li>
+							<a href="homework1.html" class="current">homework 1</a>
+						</li>
+						<li>
+							<a href="homework2.html" class="none-current">homework 2</a>
+						</li>
+						<li>
+							<a href="homework3.html" class="none-current">homework 3</a>
+						</li>
+						<li>
+							<a href="#" class="none-current"><strong>homework 4</strong></a>
+						</li>
+						<li>
+							<a href="homework5.html" class="none-current">homework 5</a>
+						</li>
+						<li>
+							<a href="homework6.html" class="none-current">homework 6</a>
+						</li>
+						<li>
+							<a href="homework7.html" class="none-current">homework 7</a>
+						</li>
+						<li>
+							<a href="homework8.html" class="none-current">homework 8</a>
+						</li>
+						<li>
+							<a href="homework9.html" class="none-current">homework 9</a>
+						</li>
+						<li>
+							<a href="homework10.html" class="none-current">homework 10</a>
+						</li>
+					</ul>
+				</div>
+				<!-- navigation -->
+				<div class="homework">
+					<div class="question">
+						<h2>Task 1:</h2>
+						<p>Answer the three questions asked in the course.</p>
+						<ol>
+							<li>Give the SELECT command to answer the question <strong>Who will go to the party held in Peking University?</strong></li>
+							<li>Figure out a way to obtain the column labels returned by <strong>mysql_fetch_array</strong>.</li>
+							<li>Tell the difference between a CGI program and a PHP program executed by a Web Server.</li>
+						</ol>
+					</div>
+
+					<div class="answer">
+						<p>1. Use the following command: <blockquote>SELECT Guest_Name FROM guest WHERE Guest_ID IN (SELECT Guest_ID FROM guest_party WHERE Party_Num IN (SELECT Party_Num FROM party WHERE Place='Peking University'))</blockquote></p>
+						<p>2. Use "each" function to list all the key-value pairs:<blockquote>while(list($key, $val) = each($row)){<br>&nbsp;&nbsp;&nbsp;&nbsp;echo "$key => $val";<br>}</blockquote></p>
+						<p>3. The differences are reflected in the following points:
+							<ul>
+								<li>PHP programs are usually embedded in the HTML page, while CGI programs are always separate programs.</li>
+								<li>b. The filename extension of PHP programs are often .php, .php3 or .phtml, while those of CGI programs are diverse, which depend on the language. That means there are many language can be used to write a CGI program.</li>
+								<li>c. PHP processor is one integrated part of Web Server, while CGI programs are usually compiled or interpreted by their own tools. </li>	
+						</p>
+					</div>
+					<div class="question">
+						<h2>Task 2:</h2>
+						<p>Set up PHP for your Apache and test it.</p>
+					</div>
+					<div class="answer">
+						<p>Already done.</p>
+					</div>
+
+					<div class="question">
+						<h2>Task 3:</h2>
+						<p>Transform the guest book that you implemented in week 3 into a Database version.</p>
+					</div>
+					<div class="answer">
+						<p>This <a href="./homework4/survey.html">Questionnaire</a>, which acts the same as last week's Quwstionnaire, is implemented by php and mysql. </p>
+					</div>
+
+					<div class="question">
+						<h2>Task 4 (optional):</h2>
+						<p>For homework3, only one Table is created. This time, create the other two tables, party table and party_guest table( you can choose different table names). Functions realized include:1)Guest can find out what parties will be given and when and where. 2)In additon to Guest name, Age, Gender, .... User can choose what parties he or she wants to go. 2)Separate PHP programs are provided for the organizer to input information about the parties will be given. </p>
+					</div>
+					<div class="answer">
+						<p>This is the revised <a href="./homework4/new_survey.php">Questionnaire</a>. New functions that added:</p>
+						<p>1. Guests can select their interested party.</p>
+						<p>2. New form designed for Party Hosts to submit imformation.</p>
+						<p>3. 2 databases: "party" and "guest_party" are added to the system.</p>
+						<p>4. All 3 databases can be shown and modefied.</p>
+					</div>
+
+					<div class="question">
+						<h2>Task 5 (optional):</h2>
+						<p>Realize more query functions.</p>
+					</div>
+					<div class="answer">
+						<p>Nothing more due to the time limit.</p>
+					</div>
+				</div>
+				<!-- homework -->
+			</div>
+		</section>
+		<!-- content -->
+
+	</section>
+	<!-- main -->
+
+	<footer>
+		<div class="wrap">
+				
+		</div>
+		<!-- wrap -->
+		<div class="footer-image"></div>
+		
+	</footer>
+
+	
+	
+</body>
+</html>

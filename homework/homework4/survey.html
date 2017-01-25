@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A Simple Survey</title>
+	<style type="text/css">
+		.content{
+			margin: 200px 400px;
+		}
+		.wrap{
+			padding: 20px;
+			width: 300px;  
+			border: 7px solid #096;
+		}
+		.wrap form{
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+<div class="content">
+<div class="wrap">
+	<form method="get" action="submit.php">
+		Name: <br>
+		<input type="text" name="name" value="Your Name"><br><br>
+		Age: <br>
+		<input type="text" name="age" value="Your Age"><br><br>
+		Gender: <br>
+		<input type="radio" name="gender" value="male" checked>Male
+		<input type="radio" name="gender" value="female">Female<br><br>
+		E-mail address: <br>
+		<input type="text" name="e_mail" value="you@example.com"><br><br>
+		<input type="submit" value="submit"><br><br>
+	</form>		
+	<hr>
+	<form action="show_data.php" method="get">
+		<p>If you wanna check or delete data, click → 
+		<input type="submit" value="show data">
+		</p>	
+	</form>
+</div>
+	
+</div>
+</body>
+</html>

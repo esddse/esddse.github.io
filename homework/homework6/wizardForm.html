@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TJZ BLOG | LEARN TO WALK BEFORE YOU RUN</title>
+	<link rel="stylesheet" href="wizardForm_style.css">
+	 <script language="javascript">
+   <!--
+   // Investigating a Form
+   // Some ideas here were taken from David Flanagan; "JavaScript. 3rd edition"; 1998; O'Reilly
+   // Another GREAT! Nutshell book.
+   // See Chapter 16 at ftp://ftp.oreilly.com/pub/examples/nutshell/javascript/
+   // I also used Sebesta; "programming the World Wide Web 2nd edition"; 2003; Addison Wesley
+   // and Bates; "Web Programming"; 2002; Wiley.
+   
+   	var word1 = "my word"; // a global variable
+   
+   
+   	function checkSubmit() {
+   
+     	var q = document.quiz;
+     	var qc = q.chat;
+
+     	//window.alert("Checking submit ..." + document.quiz.watch[0].checked);
+ 
+     	for ( var i=0; i<q.holiday.options.length; i++)
+     	{
+       		if (q.holiday.options[i].selected)
+       		{
+         		qc.value += "Selected: " + q.holiday.options[i].value + "\n";
+       		}
+     	}
+     
+     	if ( noValue(q.Personal_FirstName.value) || noValue(q.Personal_LastName.value) )
+     	{
+       		window.alert("Please complete your name!");
+       		return false;
+     	}
+
+     	if( !checkAge(q.Personal_Age.value) )
+     	{
+     		window.alert("Please check your age. (5 < age < 150)");
+     		return false;
+     	}
+
+     	if( !checkID(q.Personal_IDNumber.value) )
+     	{
+     		window.alert("Please check your ID. (numbers only)");
+     		return false;
+     	}
+     
+     	checkText(q, qc);
+     
+     	return true;
+   	} // checkSubmit
+   
+   	function checkAge(stringAge){
+   		var reg = new RegExp('[^0-9]');
+   		var result = reg.test(stringAge);
+   		if(result == true)
+   			return false;
+   		var num = Number(stringAge);
+   		if (num <= 5 || num >= 150)
+  			return false;
+  		return true;
+   	}
+
+   	function checkID(stringID){
+   		var reg = new RegExp('[^0-9]');
+   		return !reg.test(stringID);
+   	}
+
+   	function myAlert2(aString) {
+     	window.alert("Alerting" +aString);
+   	}
+   
+   	function noValue(val)  {
+     // javascript uses the regular expressions from perl
+     // Sebesta 4.12.1
+     	if (val.search(/\w/) == -1) {
+       		return true;
+     	} 
+     	return false;
+   	} //noValue
+   
+   	function checkText(q, qc) {
+     //Warn if text boxes are empty (any alphanumeric is OK)
+     //qc.value += "checkText\n"; 
+     	for ( var i =0 ; i < q.length; i++) {
+       		if (noValue(q.elements[i].value)) {
+        		qc.value += "No value: "+ q.elements[i].name + "\n";
+       		}
+     	}
+      
+   	}// checkText
+
+   -->
+   </script>
+</head>
+
+<body>	
+	<section class="main">
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<a href="../../index.html">
+						<img src="../../img/logo.png" width="400" height="150" alt="TJZ BLOG | LEARN TO WALK BEFORE YOU RUN">
+					</a>
+				</div>
+				<!-- logo -->
+				<div class="social">
+					<ul>
+						<li>
+							<a href="#" class="social-facebook" title="facebook">
+								<img src="../../img/facebook.png" alt="facebook" class="social-facebook-img">
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-twitter" title="twitter">twitter</a>
+						</li>
+						<li>
+							<a href="#" class="social-googleplus" title="google plus">google plus</a>
+						</li>
+					</ul>
+				</div>
+				<!-- social -->
+				<div class="separator"></div>
+			</div>
+			<!-- wrap -->
+		</header>
+		
+		<section class="content">
+			<div class="wrap">
+				<H1>Form 2 Wizard</H1>
+				<HR>
+					<H2>A dummy form created with MS FrontPage</H2>
+					<p>(Handlers added by hand)</p>
+
+					<form action="confirm.php" onSubmit="return checkSubmit();"  method="GET" name="quiz">
+						<OL>
+							<LI>
+								<P>Please identify and describe yourself:</P>
+								<TABLE>
+									<TR>
+										<TD ALIGN="right"><EM>First Name</EM></TD>
+										<TD><INPUT TYPE=TEXT NAME="Personal_FirstName" SIZE=25></TD>
+									</TR>
+									<TR>
+										<TD ALIGN="right"><EM>Last Name</EM></TD>
+										<TD><INPUT TYPE=TEXT NAME="Personal_LastName" SIZE=25></TD>
+									</TR>
+									<TR>
+										<TD ALIGN="right"><EM>Age</EM></TD>
+										<TD><INPUT TYPE=TEXT NAME="Personal_Age" SIZE=3 MAXLENGTH=3></TD>
+									</TR>
+									<TR>
+										<TD ALIGN="right"><EM>Sex</EM></TD>
+										<TD><INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Male" CHECKED>Male 
+										<INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Female">Female</TD>
+									</TR>
+									<TR>
+										<TD ALIGN="right"><EM>ID Number</EM></TD>
+										<TD><INPUT TYPE=TEXT NAME="Personal_IDNumber" SIZE=16 MAXLENGTH=16></TD>
+									</TR>
+								</TABLE>
+
+							<LI>
+								<P>Choose one of the following options:</P>
+								<P>
+									<INPUT TYPE=RADIO NAME="watch" VALUE="Dunno" CHECKED> I don't know?!
+									<BR><INPUT TYPE=RADIO NAME="watch" VALUE="Radio"> Radio
+									<BR><INPUT TYPE=RADIO NAME="watch" VALUE="TV"> TV
+									<BR><INPUT TYPE=RADIO NAME="watch" VALUE="Film"> Film
+									<BR><BR>
+								</P>
+
+							<LI>
+								<P>Choose one of the following options:</P>
+								<P>
+									<SELECT NAME="holiday">
+	  									<OPTION value="Greece" SELECTED>Greece <OPTION value="Italy">Italy 
+	  									<OPTION value="France">France <OPTION value="Spain">Spain
+									</SELECT>
+									<BR>
+								</P>
+							<LI>
+								<P>How would you rate your knowledge of JavaScript?</P>
+								<P>
+	  								<INPUT TYPE=RADIO NAME="knowledge" VALUE="1" onClick="alert('Time for some SERIOUS learning');">1
+	  								<INPUT TYPE=RADIO NAME="knowledge" VALUE="2" onClick="alert('I hope you\'re yearning for some learning');">2
+	 								<INPUT TYPE=RADIO NAME="knowledge" VALUE="3" CHECKED>3
+	  								<INPUT TYPE=RADIO NAME="knowledge" VALUE="4">4
+	  								<INPUT TYPE=RADIO NAME="knowledge" VALUE="5">5 
+	  								<BR>
+	  							</P>
+						</OL>
+						<p />
+							<textarea name="chat" rows=5 cols=40></textarea>
+						<p />
+						<INPUT TYPE=button VALUE="Don't Push Me" name="push" onClick="alert('HOW RUDE!!!!\nI asked you NOT to push me');">
+						<INPUT TYPE=SUBMIT VALUE="Submit Form">
+						<INPUT TYPE=RESET VALUE="Reset Form" onClick="return confirm('Are you sure?');">
+
+					</FORM>
+	
+				<HR>
+<H5>Jazz Jezebel. Copyright © 1909 [Ten Bellies]. No rights reserved. Revised: 2002</H5>
+			</div>
+		</section>
+		<!-- content -->
+
+	</section>
+	<!-- main -->
+
+	<footer>
+		<div class="wrap">
+				
+		</div>
+		<!-- wrap -->
+		<div class="footer-image"></div>
+		
+	</footer>
+
+	
+	
+</body>
+</html>

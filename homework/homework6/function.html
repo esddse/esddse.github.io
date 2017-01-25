@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Cookbook</title>
+	<link rel="stylesheet" href="function_style.css">
+	
+</head>
+
+<body>	
+	<section class="main">
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<a href="../../index.html">
+						<img src="../../img/logo.png" width="400" height="150" alt="TJZ BLOG | LEARN TO WALK BEFORE YOU RUN">
+					</a>
+				</div>
+				<!-- logo -->
+				<div class="social">
+					<ul>
+						<li>
+							<a href="#" class="social-facebook" title="facebook">
+								<img src="../../img/facebook.png" alt="facebook" class="social-facebook-img">
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-twitter" title="twitter">twitter</a>
+						</li>
+						<li>
+							<a href="#" class="social-googleplus" title="google plus">google plus</a>
+						</li>
+					</ul>
+				</div>
+				<!-- social -->
+				<div class="separator"></div>
+			</div>
+			<!-- wrap -->
+		</header>
+		
+		<section class="content">
+			<div class="wrap">
+				<h1>My Recipe Collection</h1>
+				    <table border="1">
+					    <xsl:for-each select="cookbook/recipe">
+					      	<tr bgcolor="#9acd32">
+					        	<th bgcolor="green" colspan="2"><xsl:value-of select="name"/></th>
+					      	</tr>
+					    <xsl:for-each select="ingredient">
+					      	<tr>
+					        	<td><xsl:value-of select="name"/></td>
+					        	<td><xsl:value-of select="amount"/><xsl:value-of select="unit"/></td>
+					      	</tr>
+					    </xsl:for-each>
+					      	<tr>
+					        	<td class="prep" colspan="2"><xsl:value-of select="preparation"/></td>
+					      	</tr>
+					      	<tr>
+					        	<td bgcolor="lightyellow" colspan="2"><xsl:value-of select="cooking"/></td>
+					      	</tr>
+					    </xsl:for-each>
+				    </table>
+			</div>
+		</section>
+		<!-- content -->
+
+	</section>
+	<!-- main -->
+
+	<footer>
+		<div class="wrap">
+				
+		</div>
+		<!-- wrap -->
+		<div class="footer-image"></div>
+		
+	</footer>
+
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>

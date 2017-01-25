@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TJZ BLOG | LEARN TO WALK BEFORE YOU RUN</title>
+	<link rel="stylesheet" href="popups_style.css">
+	<script language="javascript">
+ 		// 3 types of popup box - alert (messages only), confirm (yes/no), prompt (string)
+ 	  	// These popup boxes all use plain text not html (\n is allowed tho')
+ 	  	// they are all modal (blocking) 
+   
+ 	  	function wakeywakey() { // ALERT 
+ 	    	window.alert("*****************\n" + "You woke me up...\n\n" +
+ 	                 "I was fast asleep\n*****************" );                      
+ 	  	}
+   
+	   	function gotoURL() { // got to url
+	       	var n = prompt("Enter URL:\n('http://' or 'https://' needed)", "http://www.baidu.com"); 
+	       	window.location = n;
+   		}
+   		function showStatus(string){
+   			document.getElementById("status").innerHTML="Status: "+string;
+   		}
+
+   </script>
+</head>
+
+<body>	
+	<section class="main">
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<a href="../../index.html">
+						<img src="../../img/logo.png" width="400" height="150" alt="TJZ BLOG | LEARN TO WALK BEFORE YOU RUN">
+					</a>
+				</div>
+				<!-- logo -->
+				<div class="social">
+					<ul>
+						<li>
+							<a href="#" class="social-facebook" title="facebook">
+								<img src="../../img/facebook.png" alt="facebook" class="social-facebook-img">
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-twitter" title="twitter">twitter</a>
+						</li>
+						<li>
+							<a href="#" class="social-googleplus" title="google plus">google plus</a>
+						</li>
+					</ul>
+				</div>
+				<!-- social -->
+				<div class="separator"></div>
+			</div>
+			<!-- wrap -->
+		</header>
+		
+		<section class="content">
+			<div class="wrap">
+				<h2>1.</h2>
+				<p>you can click the <button style="border:none" onclick="gotoURL()">button</button> to go anywhere you want.</p>
+				
+				<h2>2.</h2>
+				<p>Actually I cannot see the status bar in my browser...</p>
+				<p>But I guess "the Lime" forget the statement "return true;" compared to that of "the Lemon".</p>
+				<p>So I fixed this problem by another way which is showing the status on the page directly.</p>
+				<div class="wrap2">
+					<p>Mr Pudding says: Do you want to go to 
+						<a href="#" onMouseOver="showStatus('Off to the Lemon')" onMouseOut="showStatus('')" >the Lemon</a>?
+						<br>
+						or would you prefer the 
+						<a href="#" onMouseOver="showStatus('Ah.... I see that you prefer the lime')" onMouseOut="showStatus('')">the Lime</a>?
+					</p>
+				</div>
+				
+				<p id="status">Status:</p>
+		
+			</div>
+		</section>
+		<!-- content -->
+
+	</section>
+	<!-- main -->
+
+	<footer>
+		<div class="wrap">
+				
+		</div>
+		<!-- wrap -->
+		<div class="footer-image"></div>
+		
+	</footer>
+
+	
+	
+</body>
+</html>
